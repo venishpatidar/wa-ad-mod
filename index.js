@@ -4,7 +4,7 @@ const { LAUNCH_CONFIG, LLM_URL } = require('./config')
 // Only process message having length more then 46
 const WORD_LEN_TRSH = 46;
 const STATUS_KEYWORD = "Hi Carolina :status"
-const CLEAR_INTERVAL = 60 * 1000; // 12 hours in milliseconds
+const CLEAR_INTERVAL = 12 * 60 * 1000; // 12 hours in milliseconds
 
 function start(client) {
     client.onMessage(async message => {
@@ -54,20 +54,20 @@ function start(client) {
 
 
     // Clears all the chat after CLEAR_INTERVAL time period
-    setTimeout(async () => {
-        try {
-            const success = await client.clearAllChats();
-            if (success) {
-                console.log('[+] All chats cleared.');
-            } 
-            else {
-                console.log('[X] Failed to clear chats.');
-            }   
-        }
-        catch (error) {
-            console.error('[X] Failed to clear chats:', error);
-        }
-    }, CLEAR_INTERVAL);
+    // setTimeout(async () => {
+    //     try {
+    //         const success = await client.clearAllChats();
+    //         if (success) {
+    //             console.log('[+] All chats cleared.');
+    //         } 
+    //         else {
+    //             console.log('[X] Failed to clear chats.');
+    //         }   
+    //     }
+    //     catch (error) {
+    //         console.error('[X] Failed to clear chats:', error);
+    //     }
+    // }, CLEAR_INTERVAL);
 }
 
   
