@@ -4,7 +4,7 @@ const { LAUNCH_CONFIG, LLM_URL } = require('./config')
 // Only process message having length more then 46
 const WORD_LEN_TRSH = 46;
 const STATUS_KEYWORD = "Hi Carolina :status"
-const CLEAR_INTERVAL = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+const CLEAR_INTERVAL = 30 * 1000; // 12 hours in milliseconds
 
 function start(client) {
     client.onMessage(async message => {
@@ -14,12 +14,12 @@ function start(client) {
         const author = message.author // Author and from can be different in case of group;
         const message_type = message.type
 
+        if (text===STATUS_KEYWORD){
+            await client.sendText(author, 'Hi 👋, I am online.');
+        }
         // Calling the LLM api to analyze the text
         if(message_type==="chat" && text.length>=WORD_LEN_TRSH){
-            if (text===STATUS_KEYWORD){
-                await client.sendText(author, 'Hi 👋, I am online.');
-                return;
-            }
+            
             let msg = await fetch(
                 LLM_URL,{
                 method:"POST",
@@ -50,7 +50,6 @@ function start(client) {
         }
     }); // End of Client.onMeassage
 
-    console.log("Test")
     clearAllChatTimer()
 }
 
