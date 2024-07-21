@@ -1,1 +1,6 @@
 .DS_Store
+node_modules
+_IGNORE_hr
+*.yaml
+.DS_Store
+.node-persist
