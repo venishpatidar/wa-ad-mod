@@ -13,7 +13,7 @@ function start(client) {
     const message_type = message.type
 
     // Calling the LLM api to analyze the text
-    if(message_type==="chat" && text.text.length>=WORD_LEN_TRSH){
+    if(message_type==="chat" && text.length>=WORD_LEN_TRSH){
         
       let msg = await fetch(
           LLM_URL,{
