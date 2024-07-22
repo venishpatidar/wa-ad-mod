@@ -4,3 +4,4 @@ _IGNORE_hr
 *.yaml
 .DS_Store
 .node-persist
+bloom-fine-tuned
