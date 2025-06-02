@@ -18,4 +18,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_REPO_URL: ${{ secrets.HF_REPO_URL }}
-        run: git push $HF_REPO_URL main
+        run: git push https://${HF_TOKEN}@huggingface.co/spaces/venishpatidar/ad-mod main
