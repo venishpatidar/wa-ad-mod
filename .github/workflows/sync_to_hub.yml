@@ -17,5 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          HF_REPO_URL: ${{ secrets.HF_REPO_URL }}
-        run: git push https://${HF_TOKEN}@huggingface.co/spaces/venishpatidar/ad-mod main
+        run: git push https://venishpatidar:$HF_TOKEN@huggingface.co/spaces/venishpatidar/ad-mod main
