@@ -3,7 +3,7 @@ const { LAUNCH_CONFIG, LLM_URL } = require('./config')
 
 // Only process message having length more then 46
 const WORD_LEN_TRSH = 46;
-const STATUS_KEYWORD = "Hi Carolina :status"
+const STATUS_KEYWORD = "Hi :status"
 const CLEAR_INTERVAL = 12 * 60 * 1000; // 12 hours in milliseconds
 
 function start(client) {

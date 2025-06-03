@@ -1,15 +1,14 @@
 {
-    "name": "wa-automate",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "dependencies": {
-      "@open-wa/wa-automate": "^4.71.15"
-    },
-    "author": "venish",
-    "license": "ISC"
-  }
-  
+  "name": "wa-automate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@open-wa/wa-automate": "3.13.2"
+  },
+  "author": "venish",
+  "license": "ISC"
+}

@@ -1,16 +1,16 @@
 from fastapi import FastAPI, Body
-from model import Carolina
+from model import AdsMod
 
 
-MODEL_PRETRAINED_PATH = "./bloom-fine-tuned"
+MODEL_PRETRAINED_PATH = "venishpatidar/wa-ad-mod"
 
 app = FastAPI()
-model = Carolina(MODEL_PRETRAINED_PATH)
+model = AdsMod(MODEL_PRETRAINED_PATH)
 
 
 @app.get("/")
 def greet_json()->None:
-    return "Hello from Carolina"
+    return "Hello from Ad-Mod"
 
 @app.post("/classify")
 def classify_text(input:str=Body(...))->None:

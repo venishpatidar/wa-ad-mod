@@ -1,7 +1,7 @@
 from transformers import AutoConfig, AutoModelForSequenceClassification, AutoTokenizer
 import torch
 
-class Carolina:
+class AdsMod:
     """
         Model init method
         base model used = bloom-560m
@@ -27,6 +27,6 @@ class Carolina:
         return predicted_class
 
 if __name__=="__main__":
-    model = Carolina()
+    model = AdsMod('venishpatidar/wa-ad-mod')
     text = "Hi I am text classifier, will help you in deleteing housing ads message"
     print("Ad" if model.predict(text) else "Safe")

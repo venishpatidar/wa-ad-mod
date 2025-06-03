@@ -6,5 +6,5 @@ module.exports = {
         sessionId: 'hr',
         skipSessionSave:true
     },
-    LLM_URL:"Link to you LLM server here"
+    LLM_URL:"http://127.0.0.1:7860/classify"
 };
